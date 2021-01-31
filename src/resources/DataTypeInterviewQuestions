@@ -1,0 +1,110 @@
+Data Type Interview Questions:
+
+What are the primitive data types in Java ?
+There are eight primitive data types.
+
+byte.
+short.
+int.
+long.
+float.
+double.
+boolean.
+char.
+
+What is Autoboxing and Unboxing?
+Autoboxing refers to the automatic conversion of primitive types to its corresponding object wrapper classes.
+
+For example, converting an int to an Integer, a double to a Double etc.
+
+This automatic conversion is accomplished by the compiler.
+
+Character ch = 'c’;  // char autoboxed to its wrapper class.
+
+Float fl = 2.5f;  // float converted to Float object.
+
+Is Java primitive data type stored on stack or heap?
+Primitive types declared locally will be on the stack while primitive types that are defined as part of an object instance are stored on the heap.
+
+Local variables are stored on stack while instance and static variables are stored on the heap.
+
+What is the default value of local variables in Java?
+There is no default value for local variables.
+
+Can you compare a boolean with an int variable in Java?
+No. you will get compilation error.
+
+Difference between double and float variables in Java.
+In java, float takes 4 bytes in memory while Double takes 8 bytes in memory. Float is single precision floating point decimal number while Double is double precision decimal number.
+
+What is the default value of char data type in Java?
+The default value of a char primitive type is '\u0000'(null character) as stated in the Java Language Specification.
+The shortcut for 'u0000' is '\0', So the null can be represented either by 'u0000' or '\0'.
+
+The below Java program validates null representations using instance char field 'c'.
+
+
+public class DefaultValueForchar {  
+    char c;
+    public static void main(String[] args) {
+        char c0 = '\0';
+        char cu0000 = '\u0000';
+        DefaultValueForchar obj = new DefaultValueForchar();
+        System.out.println(obj.c);
+        System.out.println(c0);
+        System.out.println(cu0000);
+        System.out.println(c0==cu0000);
+        System.out.println(obj.c==c0);
+        System.out.println(obj.c==cu0000);
+    }
+
+}
+
+output:
+
+
+When does autoboxing and unboxing occur in Java?
+Autoboxing and unboxing can happen where an object is expected and primitive type is provided, for example, In a method invocation where an object argument is expected but primitive values are provided, Java automatically converts primitive into its equal value Object.
+
+lassic use of autoboxing is adding primitive types into Collection like ArrayList in Java.
+ArrayList<Integer> intsList = new ArrayList<Integer>();
+intsList.add(1); //autoboxing - primitive to object
+intsList.add(2);
+
+What is the output?
+System.out.println(1.0/0);
+Most of us may expect ArithmeticException, however, in this case, there will be no exception instead it prints Infinity.
+
+1.0 is a double literal and double datatype supports infinity.
+
+How primitive variables passed to methods - by value or by reference?
+In Java, primitive variables are passed to methods by value. If the passed value changes in the method, it does not change the original value.
+
+
+
+
+Primitive Data Type: such as boolean, char, int, short, byte, long, float, and double
+Non-Primitive Data Type or Object Data type: such as String, Array, etc.
+
+Data Types Links: https://www.geeksforgeeks.org/data-types-in-java/
+https://www.geeksforgeeks.org/java-gq/data-types-2-gq/
+
+Packages: https://docs.oracle.com/en/java/javase/13/docs/api/allpackages-index.html
+https://www.assignmentexpert.com/homework-answers/programming-answer-42828.pdf
+
+Predefined packages
+Java provides various predefined classes and interfaces (API’s) organized under packages. These are known as predefined packages, following is the list of predefined packages in java −
+
+java.lang − This package provides the language basics.
+java.util − This packages provides classes and interfaces (API’s) related to collection frame work, events, data structure and other utility classes such as date.
+java.io − This packages provides classes and interfaces for file operations, and other input and output operations.
+java.math − This packages provides classes and interfaces for multiprecision arithmetics.
+java.nio − This packages provides classes and interfaces the Non-blocking I/O framework for Java
+java.net − This packages provides classes and interfaces related to networking.
+java.security − This packages provides classes and interfaces such as key generation, encryption and decryption which belongs to security frame work.
+java.sql − This packages provides classes and interfaces for accessing/manipulating the data stored in databases and data sources.
+java.awt − This packages provides classes and interfaces to create GUI components in Java.
+java.text − This packages provides classes and interfaces to handle text, dates, numbers, and messages.
+java.rmi − Provides the RMI package.
+java.time − The main API for dates, times, instants, and durations.
+java.beans − The java.beans package contains classes and interfaces related to JavaBeans components.
